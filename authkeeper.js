@@ -22,6 +22,10 @@ function myAccount() {
     
 }
 
+function myMatches() {
+    window.location = "mymatches.html";
+}
+
 function myProposals() {
     window.location = "myproposals.html";
 }
