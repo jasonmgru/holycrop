@@ -11,18 +11,19 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light" style="background: rgba(255, 255, 255, 0.8);">
-        <a class="navbar-brand" href="#"><b>Holy Crop</b></a>
+        <a class="navbar-brand" href="dashboard.html"><b>Holy Crop</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <a class="nav-link text-reset" href="#">Home</a>
-            <a class="nav-link text-reset" href="#">Make a Proposal<span class="sr-only">(current)</span></a>
-            <a class="nav-link text-reset" href="#">Search Active Proposals</a>
+            <a class="nav-link text-reset" href="makeproposal.html">Make a Proposal<span class="sr-only">(current)</span></a>
         </div>
         <div class="dropdown ml-auto">
+            <img style="cursor: pointer;" id="notificationsImage" src="baseline-notification_important-24px.svg">
             <button class="btn btn-link dropdown-toggle text-reset" type="button" id="profileName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileName">
+                <a class="dropdown-item" href="#" onclick=myProposals()>My Proposals</a>
+                <a class="dropdown-item" href="#" onclick=myAccount()>My Account</a>
                 <a class="dropdown-item" href="#" onclick=signOut()>Sign Out</a>
             </div>
         </div>
