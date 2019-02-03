@@ -17,3 +17,11 @@ firebase.auth().onAuthStateChanged((user) => {
 function signOut() {
     firebase.auth().signOut();
 }
+
+function myAccount() {
+    
+}
+
+function myProposals() {
+    window.location = "myproposals.html";
+}
