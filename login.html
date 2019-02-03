@@ -20,13 +20,13 @@
             <div class="card-body">
                 <h5 class="card-title text-center">Log In</h5>
                 <br />
-                <form id="signup">
+                <form id="signin">
                     <div class="form-group row">
                         <div class="col-sm-4">
                             <label for="emailAddress">Email</label>
                         </div>
                         <div class="col-sm-8">
-                            <input id="emailAddress" class="form-control" type="email">
+                            <input id="emailAddress" required class="form-control" type="email">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -34,20 +34,39 @@
                             <label for="passwordOne">Password</label>
                         </div>
                         <div class="col-sm-8">
-                            <input id="passwordOne" class="form-control" type="password">
+                            <input id="passwordOne" required class="form-control" type="password">
+                            <small class="text-center"><a href="#">Forgot your password?</a></small>
                         </div>
                     </div>
-                    <p class="text-center"><a href="#">Forgot your password?</a></p>
-                    <button type="button" class="btn btn-primary" style="float:right;">Log In</button>
+                    <small class="text-center">Don't have an account? <a href="index.html">Sign up.</a></small>
+                    <div id="errorAlertCollapse" class="collapse" id="collapseExample">
+                        <div id="errorAlert" class="alert alert-danger" role="alert"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="float:right;">Log In</button>
                     <!--Needs to check if passwords match.-->
                 </form>
             </div>
         </div>
     </div>
 
-    <script src="makeproposal.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBACW8ail0ud6SEb1JrWXk_azlKodwcmXE",
+            authDomain: "holycrop-5ae98.firebaseapp.com",
+            databaseURL: "https://holycrop-5ae98.firebaseio.com",
+            projectId: "holycrop-5ae98",
+            storageBucket: "holycrop-5ae98.appspot.com",
+            messagingSenderId: "70007980440"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="login.js"></script>
 </body>
 </html>
