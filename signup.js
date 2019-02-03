@@ -1,11 +1,4 @@
 $(document).ready(() => {
-
-    firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-            window.location = "makeproposal.html";
-        }
-    });
-
     document.getElementById('signup').onsubmit = (event) => {
         let password1 = document.getElementById("passwordOne").value;
         let password2 = document.getElementById("passwordTwo").value;
@@ -18,7 +11,27 @@ $(document).ready(() => {
             return false;
         } else {
             let email = document.getElementById("emailAddress").value;
-            firebase.auth().createUserWithEmailAndPassword(email, password1).catch((error) => {
+            firebase.auth().createUserWithEmailAndPassword(email, password1).then(() => {
+                // Success
+                let uid = firebase.auth().currentUser.uid;
+                let firstName = document.getElementById("firstName").value;
+                let lastName = document.getElementById("lastName").value;
+                let farmer = document.getElementById("farmerCheckbox").checked;
+                firebase.firestore().collection("users").doc(uid).set({
+                    firstName: firstName,
+                    lastName: lastName,
+                    farmer: farmer,
+                    uid: uid,
+                    email: email
+                }).then(() => {
+                    firebase.auth().onAuthStateChanged((user) => {
+                        if (user) {
+                            window.location = "makeproposal.html";
+                        }
+                    });
+                });
+            }).catch((error) => {
+                // Error
                 errorAlert.innerHTML = error.message;
                 $("#errorAlertCollapse").collapse("show");
             });
