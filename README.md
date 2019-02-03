@@ -7,7 +7,7 @@ regardless of unforeseen weather conditions or other circumstances that inhibit 
 farmers and investors can make and view proposals which describe what crops they can grow or would invest in, the price at which they
 would like to sell or buy, and a return percentage for the investors.
 
-The website can be accessed at www.holycrop.org.
+The website can be accessed at holycrop-5ae98.firebaseapp.com.
 
 Authors:
 Jayden Alstad
