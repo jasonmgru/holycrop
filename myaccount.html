@@ -23,7 +23,7 @@
             <button class="btn btn-link dropdown-toggle text-reset" type="button" id="profileName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileName">
                 <a class="dropdown-item" href="#" onclick=myProposals()>My Proposals</a>
-                <a class="dropdown-item" href="#" onclick=myAccount()>My Account</a>
+                <a class="dropdown-item" href="myaccount.html" onclick=myAccount()>My Account</a>
                 <a class="dropdown-item" href="#" onclick=signOut()>Sign Out</a>
             </div>
         </div>
@@ -35,10 +35,10 @@
         <div class="card" style="width: inherit; background-color: rgba(255, 255, 255, 0.8); ">
             <div class="card-body">
                 <h5 class="card-title">My Profile</h5>
-                <p for="name">Name: *firstName lastName*</p>
-                <p for="email">Email: *email*</p>
-                <p for="location">Location: *city, state, country*</p>
-                <p for="org">Organization: *organization or none*</p>
+                <p for="name">Name: Jason Gruenhagen</p>
+                <p for="email">Email: gruen065@umn.edu</p>
+                <p for="location">Location: Minneapolis, MN, USA</p>
+                <p for="org">Organization: My Farm</p>
                 
                 <button href="#" type="button" class="btn btn-primary" style="float:right;">Edit Profile</button>
             </div>
@@ -63,7 +63,7 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="makeproposal.js"></script>
+    <script src="Script1.js"></script>
     <script src="authkeeper.js"></script>
 </body>
 </html>
