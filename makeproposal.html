@@ -23,8 +23,9 @@
             <button class="btn btn-link dropdown-toggle text-reset" type="button" id="profileName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileName">
-                <a class="dropdown-item" href="#" onclick=myProposals()>My Proposals</a>
-                <a class="dropdown-item" href="#" onclick=myAccount()>My Account</a>
+                <a class="dropdown-item" href="#" onclick=myMatches()>Matches</a>
+                <a class="dropdown-item" href="#" onclick=myProposals()>Proposals</a>
+                <a class="dropdown-item" href="#" onclick=myAccount()>Account</a>
                 <a class="dropdown-item" href="#" onclick=signOut()>Sign Out</a>
             </div>
         </div>
@@ -37,21 +38,6 @@
             <div class="card-body">
                 <h5 class="card-title text-center">Make a Proposal</h5>
                 <form id="makeProposalForm">
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            <label for="whoAreYou">I am a...</label>
-                        </div>
-                        <div class="col-sm-8">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="farmerCheckbox" value="option1" name="amRadio" checked="checked" onchange="onFormChange()">
-                                    <label class="form-check-label" for="farmerCheckbox">Farmer</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="investorCheckbox" value="option2" name=amRadio>
-                                    <label class="form-check-label" for="investorCheckbox">Investor</label>
-                                </div>
-                          </div>
-                    </div>
                     <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="cropSelect">Crop</label>
@@ -105,6 +91,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-functions.js"></script>
     <script>
       // Initialize Firebase
       var config = {
